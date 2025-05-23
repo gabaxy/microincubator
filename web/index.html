@@ -1,0 +1,60 @@
+<!-- mod\bacteria\web\index.html -->
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mikroorganizmų inkubatorius</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script type="importmap">
+    {
+      "imports": {
+        "three":                     "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+        "three/addons/":             "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/",
+        "three/addons/geometries/":  "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/geometries/"
+      }
+    }
+  </script>
+</head>
+<body>
+  
+  <div id="intro-wrapper">
+    <div class="intro-bg"></div>
+    <div class="intro-content">
+      <header class="main-header">
+        <h1>PASIRINKITE, KURĮ PAVIRŠIŲ NORĖTUMĖTE IŠTIRTI IR UŽAUGINTI</h1>
+      </header>
+      <div class="grid">
+        <div class="choice" data-bac="water">
+          <img class="base" src="images/clean water.png" alt="Švarus tualetas"/>
+          <img class="hover" src="images/dirty water.png" alt="Nešvarus tualetas"/>
+        </div>
+        <div class="choice" data-bac="sink">
+          <img class="base" src="images/clean sink.png" alt="Švari kriauklė"/>
+          <img class="hover" src="images/dirty sink.png" alt="Nešvari kriauklė"/>
+        </div>
+        <div class="choice" data-bac="palm">
+          <img class="base" src="images/clean palm.png" alt="Švari ranka"/>
+          <img class="hover" src="images/dirty palm.png" alt="Nešvari ranka"/>
+        </div>
+        <div class="choice" data-bac="bread">
+          <img class="base" src="images/clean bread.png" alt="Švarus duonos kepalas"/>
+          <img class="hover" src="images/dirty bread.png" alt="Nešvarus duonos kepalas"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="game">
+    <div id="threejs-container"></div>
+    <div id="thermometer-container"></div>
+    <div class="info-panel">
+      Valandų skaičius: <span id="day-counter"></span><br>
+      Augimo faktorius: <span id="growth-factor"></span>
+    </div>
+  </div>
+
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>
